@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>raven</title>
+    <link rel="stylesheet" type="image/x-icon" href="favicon1.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+     @font-face{
+        font-family: myfont;
+        src:url(myfont.ttf);
+    }
+/* dropdown............................................................................................................... */
+    .altmenu{
+    
+    animation: altmenuAnim 0.2s ease-in-out;
+    transform-origin: top; 
+    left: 0; 
+    width: 100%; 
+    display: none;  
+    position: absolute;
+    margin-top: 10px;
+    background-color:rgb(40, 40, 40);
+    cursor: pointer;
+    z-index: 1;
+    }
+    @keyframes altmenuAnim{
+        from{transform: scaleY(0);}
+    }
+
+    .altmenu a:link{
+        color:black;
+    }    
+
+    .altmenu a:visited{
+        color:black;
+    }    
+
+    .altmenu a:hover{
+        color:yellowgreen;
+    }    
+ 
+    .altmenu a:active{
+        color:yellowgreen;
+        background-color: rgb(40,40,40);
+    } 
+
+    .altoption{
+        padding-left: 3px;
+        padding-right: 3px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .altoption:hover{
+        background-color:yellowgreen;
+    }
+
+    .contentmenualt:hover{
+        background-color: rgb(40,40,40);
+    }
+    .contentmenualt:hover .altmenu{
+        display: block;
+    }
+
+
+
+/* dropdown....................................................................................................................... */
+
+
+    .divtop{
+       
+        color: white;
+        font-family: myfont;
+        padding-top: 5px;
+        padding-bottom: 20px;
+        font-size: 600%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color:black; */
+        background-image: linear-gradient(to right,red,orange,yellow,green,blue,indigo,purple,red,orange,yellow,green,blue,indigo,purple);
+        width: 100%;
+        height:fit-content;
+    }
+
+
+        body{
+            margin:0px;
+            background-image: url(/motorum.jpeg);
+            background-repeat: repeat;
+            background-size: 5%;
+        }
+
+
+        .backmenu{
+            width: 100%;
+            height:fit-content;
+            background-color:rgb(28, 28, 28);
+            display: flex;
+            justify-content:space-between;
+
+        }
+
+
+        .contentmenu{
+            color: white;
+            font-size: 21px;
+            padding:10px 20px 10px 20px;
+            /* display: flex; */
+            /* float:left;
+            clear:both; */
+        }
+        
+        .contentmenualt{
+            position: relative;
+            color: white;
+            font-size:21px;
+            padding:10px 20px 10px 20px;
+            cursor: pointer;
+            width: fit-content;
+            z-index: 1;
+            font-weight: bold;
+        } 
+
+        .contentmenuright{
+            color: white;
+            font-size: larger;
+            padding:10px 20px 10px 20px;
+            justify-content:flex-end;
+            /* display: flex; */
+            float:right;
+            /* clear:both; */
+        }
+
+
+        a:link{
+            color: white;
+            text-decoration: none;
+        } 
+
+        a:visited{
+            color:white;
+            text-decoration: none;
+        }
+        
+
+        .contentmenuright:hover{
+            background-color: rgb(40, 40, 40);
+      
+        }
+        
+
+        .contentmenu:hover{
+            background-color: rgb(40, 40, 40);
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+    <div class="divtop">Smailyy </div>     
+           
+
+    <div class="backmenu">
+    <div style="display: flex;">  
+         <div class="contentmenu" style="cursor: pointer;" onclick="window.location.href = '/'">
+            <i style="
+            height: 21px;
+            width: 21px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            border:none;
+            line-height: 21px;
+            font-size: 21px;
+            float: left;
+            clear: both;"
+             class="fa-solid fa-house" ></i> &nbsp; <b>Home</b>    </a>
+        </div>
+
+
+    
+        <div class="contentmenu" style="cursor: pointer;" onclick="window.location.href = '/contact.html'">
+          <b>Concact</b>
+        </div>
+
+
+
+        <div class="contentmenu" style="cursor: pointer;" onclick="window.location.href = '/tworaven.html'">
+             <b>About Me</b>
+        </div>
+
+         
+        <div class="contentmenu" style="cursor: pointer;" onclick="window.location.href = '/gallery.html'">
+            <b>Gallery</b>
+        </div>
+
+       
+        <div class="contentmenualt"> &nbsp; Others &nbsp;
+
+        <div class="altmenu"> 
+            <div class="altoption" onclick="window.location.href = '/arabam.html'">Arabam</div>
+            <div class="altoption" onclick="window.location.href = '/banana.html'">Baki Hoca</div>
+            <div class="altoption" onclick="window.location.href = '/handbook.html'">Student HB.</div>
+            <div class="altoption" onclick="window.location.href = '/bedirekim.html'">Bedir E.</div>
+            <div class="altoption" onclick="window.location.href = '/cafestro.html'">Stolen WebS</div>
+            <div class="altoption" onclick="window.location.href = '/kedy.html'">Kedy</div>
+            <div class="altoption" onclick="window.location.href = '/erceminki.html'">Ercem</div>
+            <div class="altoption" onclick="window.location.href = '/bug.html'">Ctrl A.V.C.</div>
+            <div class="altoption" onclick="window.location.href = '/maryjane.html'">Marj Jane</div>
+        </div>
+        
+        </div>
+
+    </div>
+
+   
+
+<!-- logolar.............................................................................................................. -->
+    <div style="display: flex;">
+
+        <div class="contentmenuright"style="cursor: pointer" onclick="window.open('https://wa.me/+905456362846','_blank')" >
+            <i style="text-decoration: none;
+            height: 21px;
+            width: 21px;
+            color: white;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            border:none;
+            line-height:21px;
+            font-size: 21px;" class="fa-brands fa-whatsapp "></i>
+        </div>
+
+
+        <div class="contentmenuright" style="cursor: pointer" onclick="window.open('https://www.instagram.com/ismail.yslyrt','_blank')">
+            <i style="text-decoration: none;
+            height: 21px;
+            width: 21px;
+            color: white;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            border:none;
+            line-height: 21px;
+            font-size: 21px;" class="fa-brands fa-instagram"></i>
+        </div>
+
+
+        <div class="contentmenuright" style="cursor: pointer" onclick="window.open('https://www.linkedin.com/in/ismail-ye%C5%9Filyurt-28b8591b4')">
+            <i style="text-decoration: none;
+            height: 21px;
+            width: 21px;
+            color:white;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            border:none;
+            line-height: 21px;
+            font-size: 21px;" class="fa-brands fa-linkedin"></i>
+        </div>
+
+    </div>
+
+<!-- logolar.............................................................................................................. -->
+
+ </div>
+
+
+ 
+
+
+</body>
+</html>

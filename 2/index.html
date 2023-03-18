@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>raven</title>
+    <link rel="icon" type="image/x-icon" href="/favicon1.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @font-face{
+        font-family: myfont;
+        src:url(myfont.ttf);
+    }
+
+    /* dropdown............................................................................................................... */
+    .altmenu{
+    
+    animation: altmenuAnim 0.2s ease-in-out;
+    transform-origin: top; 
+    left: 0; 
+    width: 100%; 
+    display: none;  
+    position: absolute;
+    margin-top: 10px;
+    background-color:rgb(40, 40, 40);
+    cursor: pointer;
+    z-index: 1;
+    }
+    @keyframes altmenuAnim{
+        from{transform: scaleY(0);}
+    }
+
+    .altmenu a:link{
+        color:black;
+    }    
+
+    .altmenu a:visited{
+        color:black;
+    }    
+
+    .altmenu a:hover{
+        color:yellowgreen;
+    }    
+ 
+    .altmenu a:active{
+        color:yellowgreen;
+        background-color: rgb(40,40,40);
+    } 
+
+    .altoption{
+        padding-left: 3px;
+        padding-right: 3px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .altoption:hover{
+        background-color:yellowgreen;
+    }
+
+    .contentmenualt:hover{
+        background-color: rgb(40,40,40);
+    }
+    .contentmenualt:hover .altmenu{
+        display: block;
+    }
+
+
+
+/* dropdown....................................................................................................................... */
+
+.divtop{
+       
+       color: white;
+       font-family: myfont;
+       padding-top: 5px;
+       padding-bottom: 20px;
+       font-size: 600%;
+       display:flex;
+       justify-content: center;
+       align-items: center;
+       /* background-color:black; */
+       background-image: linear-gradient(to right,red,orange,yellow,green,blue,indigo,purple,red,orange,yellow,green,blue,indigo,purple);
+       width: 100%;
+       height:fit-content;
+   }
+
+
+
+   .backmenu{
+            width: 100%;
+            height:fit-content;
+            background-color:rgb(28, 28, 28);
+            display: flex;
+            justify-content:space-between;
+
+        }
+
+
+        .contentmenu{
+            color: white;
+            font-size: 21px;
+            padding:10px 20px 10px 20px;
+            /* display: flex; */
+            /* float:left;
+            clear:both; */
+        }
+        
+        .contentmenualt{
+            position: relative;
+            color: white;
+            font-size:21px;
+            padding:10px 20px 10px 20px;
+            cursor: pointer;
+            width: fit-content;
+            z-index: 1;
+            font-weight: bold;
+        } 
+
+        .contentmenuright{
+            color: white;
+            font-size: larger;
+            padding:10px 20px 10px 20px;
+            justify-content:flex-end;
+            /* display: flex; */
+            float:right;
+            /* clear:both; */
+        }
+
+
+        a:link{
+            color: white;
+            text-decoration: none;
+        } 
+
+        a:visited{
+            color:white;
+            text-decoration: none;
+        }
+        
+
+        .contentmenuright:hover{
+            background-color: rgb(40, 40, 40);
+      
+        }
+        
+
+        .contentmenu:hover{
+            background-color: rgb(40, 40, 40);
+        }
+
+
+        body{
+            /* background-image:url("board.svg"); */
+            background-color: #dce5db;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' viewBox='0 0 192 192'%3E%3Cpath fill='%23008534' fill-opacity='0.54' d='M192 15v2a11 11 0 0 0-11 11c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H145v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11 13 13 0 1 1 .02 26 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43a6.1 6.1 0 0 0-3.03 4.87V143h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 181 164a11 11 0 0 0 11 11v2a13 13 0 0 1-13-13 12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84a6.1 6.1 0 0 0-4.87-3.03H145v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 124 181a11 11 0 0 0-11 11h-2a13 13 0 0 1 13-13c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43a6.1 6.1 0 0 0 3.03-4.87V145h-35.02a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 107 124a11 11 0 0 0-22 0c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H49v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11A13 13 0 0 1 81 192h-2a11 11 0 0 0-11-11c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V145H11.98a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 0 1 0 177v-2a11 11 0 0 0 11-11c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H47v-35.02a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 28 109a13 13 0 1 1 0-26c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43A6.1 6.1 0 0 0 47 84.02V49H11.98a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 11 28 11 11 0 0 0 0 17v-2a13 13 0 0 1 13 13c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84A6.1 6.1 0 0 0 11.98 47H47V11.98a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 68 11 11 11 0 0 0 79 0h2a13 13 0 0 1-13 13 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43A6.1 6.1 0 0 0 49 11.98V47h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 85 68a11 11 0 0 0 22 0c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H143V11.98a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 124 13a13 13 0 0 1-13-13h2a11 11 0 0 0 11 11c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V47h35.02a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 179 28a13 13 0 0 1 13-13zM84.02 143a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 83 124a13 13 0 1 1 26 0c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84a6.1 6.1 0 0 0 4.87 3.03H143v-35.02a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 164 107a11 11 0 0 0 0-22c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V49h-35.02a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 1 1 83 68a12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84A6.1 6.1 0 0 0 84.02 49H49v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 28 85a11 11 0 0 0 0 22c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V143h35.02z'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 5%;
+            margin: 0px;
+        }
+
+        
+        @keyframes emojianime{
+        /* 0%{transform:translateY(0%);} */
+        25%{transform:translateY(-10%);}
+        /* 50%{transform:translateY(0%);} */
+        75%{transform:translateY(10%);}
+        /* 100%{transform:translateY(0%);} */
+        }
+        
+
+        @keyframes topanime{
+        0%{transform: translateY(-100%)}
+        /* 50%{ transform: translateY(0%)} */
+        50%{transform:translateY(20%);}
+        /* 55%{transform:translateY(0%);}
+        60%{transform:translateY(20%);}
+        65%{transform:translateY(0%);}
+        70%{transform:translateY(20%);}
+        75%{transform:translateY(0%);}
+        80%{transform:translateY(20%);}
+        85%{transform:translateY(0%);}
+        90%{transform:translateY(20%);}
+        95%{transform:translateY(10%);} */
+        100%{transform: translateY(0%)}
+        }
+
+
+        @keyframes mainanime{
+            0%{ transform: scale(0);}
+            70%{transform:scale(1.2);}
+            100%{transform:scale(1);}
+        }
+
+        .divmain{
+             display:flex;
+             color:darkblue;
+             width: calc(100% - 95px) ;
+             margin: auto;
+             height: 200px;
+             background-color:cornsilk;
+             border-radius: 15px; 
+             border: 3px;
+             border-color: black;
+             font-size: 50px;
+             align-items: center;
+             justify-content: center;
+             font-weight: bolder;
+             margin-bottom: 50px;
+             margin-top: 30px;
+             animation:topanime 1s ease-in-out  ;        
+             }
+
+
+            .divbottom{
+             display:block;
+             color:darkblue;
+             width: calc(100% - 95px);
+             margin: auto;
+             height: fit-content;
+             background-color:cornsilk;
+             border-radius: 15px; 
+             border: 3px;
+             border-color: black;
+             font-size: 50px;
+             align-items: center;
+             justify-content: center;
+             font-weight: bolder;
+             margin-bottom: 50px;
+             margin-top: 30px;
+             /* animation:mainanime 0.4s ease-in-out */
+            }
+
+
+        .divleft{
+            float:left;
+            color:darkblue;
+            width:30vw;
+            height: fit-content;
+            background-color: cornsilk;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            margin-left: 3vw;
+            margin-right: 6vw;
+            /* display: inline-block; */
+            animation:mainanime 0.4s ease-in-out
+       }
+
+
+       .divright{
+            color:black;
+            width:51vw;
+            height: fit-content;
+            background-color: cornsilk;
+            font-size: 30px;
+            text-align: justify;
+            margin-bottom: 30px;
+            padding: 20px;
+            float:left;
+            margin: auto;
+            margin-right:3vw;
+            /* margin-left: 50px; */
+            animation:mainanime 0.4s ease-in-out
+        }
+
+
+        .divlink{
+            width: 100%;
+            height: fit-content;
+            border: 1px;
+            border-color:greenyellow;
+            font-size: 30px;
+            text-align: center;
+        }
+
+
+        .clickme:hover{
+            transition: 0.2s ease-in-out;
+            background-color:hotpink;
+            color: black;
+            /* border-color: greenyellow; */
+            text-decoration: none;
+            border-style: solid;
+            border-radius: 20px;
+        }
+
+
+        a{
+            text-decoration: none;
+            padding: 5px 10px 5px 10px;}
+
+
+        a:link{  
+          color: black;
+          /* border:greenyellow solid; */
+          text-decoration: none;
+          
+        }
+
+
+        a:hover{
+            transition: 0.2s ease-in-out;
+            background-color: greenyellow;
+            color: black;
+            /* border-color: greenyellow; */
+            text-decoration: none;
+            border-style: solid;
+            border-radius: 20px;
+        }
+
+
+        a:active{
+            background-color: yellowgreen;
+            color: black;
+         } 
+
+
+         a:visited{
+            color: black;
+         }
+
+    
+    </style>        
+</head>
+<body>
+
+    <div class="divtop">Smailyy </div>     
+           
+
+    <div class="backmenu">
+    <div style="display: flex;">  
+         <div class="contentmenu" style="cursor: pointer;" onclick="window.location.href = '/'">
+            <i style="
+            height: 21px;
+            width: 21px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            border:none;
+            line-height: 21px;
+            font-size: 21px;
+            float: left;
+            clear: both;"
+             class="fa-solid fa-house" ></i> &nbsp; <b>Home</b>    </a>
+        </div>
+
+
+    
+        <div class="contentmenu" style="cursor: pointer;" onclick="window.location.href = '/contact.html'">
+          <b>Concact</b>
+        </div>
+
+
+
+        <div class="contentmenu" style="cursor: pointer;" onclick="window.location.href = '/tworaven.html'">
+             <b>About Me</b>
+        </div>
+
+         
+        <div class="contentmenu" style="cursor: pointer;" onclick="window.location.href = '/gallery.html'">
+            <b>Gallery</b>
+        </div>
+
+       
+        <div class="contentmenualt"> &nbsp; Others &nbsp;
+
+        <div class="altmenu"> 
+            <div class="altoption" onclick="window.location.href = '/arabam.html'">Arabam</div>
+            <div class="altoption" onclick="window.location.href = '/banana.html'">Baki Hoca</div>
+            <div class="altoption" onclick="window.location.href = '/handbook.html'">Student HB.</div>
+            <div class="altoption" onclick="window.location.href = '/bedirekim.html'">Bedir E.</div>
+            <div class="altoption" onclick="window.location.href = '/cafestro.html'">Stolen WebS</div>
+            <div class="altoption" onclick="window.location.href = '/kedy.html'">Kedy</div>
+            <div class="altoption" onclick="window.location.href = '/erceminki.html'">Ercem</div>
+            <div class="altoption" onclick="window.location.href = '/bug.html'">Ctrl A.V.C.</div>
+            <div class="altoption" onclick="window.location.href = '/maryjane.html'">Marj Jane</div>
+        </div>
+        
+        </div>
+
+    </div>
+
+   
+
+<!-- logolar.............................................................................................................. -->
+    <div style="display: flex;">
+
+        <div class="contentmenuright"style="cursor: pointer" onclick="window.open('https://wa.me/+905456362846','_blank')" >
+            <i style="text-decoration: none;
+            height: 21px;
+            width: 21px;
+            color: white;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            border:none;
+            line-height:21px;
+            font-size: 21px;" class="fa-brands fa-whatsapp "></i>
+        </div>
+
+
+        <div class="contentmenuright" style="cursor: pointer" onclick="window.open('https://www.instagram.com/ismail.yslyrt','_blank')">
+            <i style="text-decoration: none;
+            height: 21px;
+            width: 21px;
+            color: white;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            border:none;
+            line-height: 21px;
+            font-size: 21px;" class="fa-brands fa-instagram"></i>
+        </div>
+
+
+        <div class="contentmenuright" style="cursor: pointer" onclick="window.open('https://www.linkedin.com/in/ismail-ye%C5%9Filyurt-28b8591b4')">
+            <i style="text-decoration: none;
+            height: 21px;
+            width: 21px;
+            color:white;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            border:none;
+            line-height: 21px;
+            font-size: 21px;" class="fa-brands fa-linkedin"></i>
+        </div>
+
+    </div>
+
+<!-- logolar.............................................................................................................. -->
+
+ </div>
+
+    <div  class="divmain"> 
+        <span style="font-family:'Courier New', Courier, monospace; ;">Hi Buddy! Bring your mom next time </span>
+        <span style="font-size: 50px;justify-content: center;animation:emojianime infinite 85ms;"> &#128514;</span>
+    </div>
+
+
+    <div class="divleft"> 
+         <div class="divlink">    <p style="font-weight: bold;font-size: 50px;">My Fun Pages</p> </div>
+         <div class="divlink">    <a href="http://smailyy.com.tr/bedirekim.html"> &rarr;  Bedir Ekim Sweetheart</a><br><br> </div>
+         <div class="divlink">    <a href="http://smailyy.com.tr/arabam.html">&rarr; Arabam Dacia</a><br><br> </div>
+         <div class="divlink">    <a href="http://smailyy.com.tr/banana.html">&rarr; Baki Teacher</a><br><br> </div>
+         <div class="divlink">    <a href="http://smailyy.com.tr/cafestro.html">&rarr; Stolen Website</a><br><br> </div>
+         <div class="divlink">    <a href="http://smailyy.com.tr/handbook.html">&rarr; ITU YDY Student Handbook</a><br><br> </div>
+         <div class="divlink">    <a href="http://smailyy.com.tr/kedy.html">&rarr; My Rented Cat</a><br><br> </div>
+         <div class="divlink">    <a href="http://smailyy.com.tr/erceminki.html">&rarr; Ercem Bro</a><br><br> </div>
+         <div class="divlink">    <a href="http://smailyy.com.tr/bug.html">&rarr; Ctrl A C V</a><br><br> </div>
+         <div class="divlink">    <a href="http://smailyy.com.tr/maryjane.html">&rarr; Mary Jane Lyrics</a> <br> <br> </div>
+    </div>
+
+
+    <div class="divright"> <span style="font-size: 50px;font-family: 'Courier New', Courier, monospace;font-weight: bolder;text-align: center;">WHO AM I</span> <br>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum nesciunt esse incidunt illum. Deserunt id quasi, eligendi nihil enim tenetur quas nobis dolorum quisquam quae a error et. Hic eveniet exercitationem quia a commodi sunt facilis porro ipsa explicabo ex quis unde maiores quidem odit qui eligendi iure, est id obcaecati! Unde exercitationem voluptatibus consectetur? Mollitia officiis possimus dicta fugiat voluptatum adipisci ab sit minus quia accusantium sint quas, voluptate ipsa labore alias nam, cumque voluptatibus doloribus eveniet! Laboriosam dicta suscipit eaque perspiciatis nesciunt accusantium. Labore, libero eveniet. Fugit corporis exercitationem maiores assumenda, voluptatem, enim omnis accusamus delectus blanditiis veniam soluta at laborum tenetur odio dignissimos vitae quo beatae unde maxime totam rem consequuntur. Placeat vero aspernatur delectus aliquam asperiores deleniti corrupti quaerat voluptatibus nam sequi cumque impedit, tempora, corporis voluptatem eligendi doloremque assumenda minima molestias minus eveniet sed, ut aperiam quisquam. Distinctio laboriosam laudantium culpa eum quos! Unde qui praesentium explicabo?
+    </div>
+
+    <div style="clear: both"></div>
+
+    <div style="justify-content: center; text-align: center;" class="divbottom"> Do you looking for me? <br>
+         <a class="clickme" style="justify-content: center;text-align: center; " href="http://smailyy.com.tr/contact.html">click here</a> 
+    </div>
+
+</body>
+</html>

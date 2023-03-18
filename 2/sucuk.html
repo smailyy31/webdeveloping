@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/regular.min.css" integrity="sha512-3YMBYASBKTrccbNMWlnn0ZoEOfRjVs9qo/dlNRea196pg78HaO0H/xPPO2n6MIqV6CgTYcWJ1ZB2EgWjeNP6XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.css" integrity="sha512-+ouAqATs1y4kpPMCHfKHVJwf308zo+tC9dlEYK9rKe7kiP35NiP+Oi35rCFnc16zdvk9aBkDUtEO3tIPl0xN5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Afyon Sucukları</title>
+<style>
+
+
+     @font-face{
+        font-family: myfont;
+        src:url(myfont.ttf);
+    }
+
+
+    @keyframes maintext{
+        0%{transform: scale(1)}
+        50%{transform: scale(1.1)}
+        100%{transform: scale(1)}
+    }
+
+
+    @keyframes sucukanime{
+        0%{transform:rotate(0deg)}
+        25%{transform:rotate(5deg)}
+        50%{transform:rotate(0deg)}
+        75%{transform:rotate(-5deg)}
+        100%{transform:rotate(0deg)}
+    }
+
+    body{
+        margin: 0px;
+    }
+
+
+    .divfirst{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        user-select: none;
+    }
+
+
+    .divfirstimg{
+        width: 100%;
+        height:100%;
+        object-fit: contain;  
+        z-index: 1;
+    }
+
+
+    .divfirstText{
+        position:absolute;
+        color:white;
+        font-size: 15vw;
+        font-weight: 400;
+        font-family: myfont;
+        z-index: 10;
+        animation-name: maintext;
+        animation-timing-function: ease-in-out;
+        animation-duration: 3s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        user-select: none;
+    }
+
+
+    .sucuk1{
+        position: absolute;
+        left: 10%;
+        top:50%;
+        width: 5%;
+        height: auto;
+        z-index: 3;
+        animation-name: sucukanime;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transform-origin: top;
+    }
+
+
+    .sucuk2{
+        position: absolute;
+        left: 18%;
+        top:30%;
+        width: 5%;
+        height: auto;
+        z-index: 3;
+        animation-name: sucukanime;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transform-origin: top;
+    }
+
+
+    .sucuk3{
+        position: absolute;
+        left: 90%;
+        top:50%;
+        width: 5%;
+        height: auto;
+        z-index: 3;
+        animation-name: sucukanime;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transform-origin: top;
+    }
+
+
+    .sucuk4{
+        position: absolute;
+        left: 80%;
+        top:40%;
+        width: 5%;
+        height: auto;
+        z-index: 3;
+        animation-name: sucukanime;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transform-origin: top;
+    }
+
+
+    .divSecond{
+        display: flex;
+        height: 600px;
+        width: 100%;
+        border-bottom: 2px solid black;
+        border-collapse: collapse;
+    }
+
+
+    .divSleft{
+        height: 600px;
+        width: 75%;
+        padding: 20px;
+        padding-right:70px ;
+        font-size: 24px;
+        text-align: justify;
+        padding-top: 40px;
+        /* border-right: 1px solid black; */
+    }
+
+
+    .divSright{
+        width: 25%;
+        margin-top: 75px;
+        margin-bottom: 75px;
+        margin-right:30px;
+        height: 450px;
+        background-color:aliceblue;
+        color: red;
+        /* border: 1px solid black; */
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+        font-family:cursive;
+        font-weight: bold;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; 
+    }
+
+
+    .divThird{
+        width: 100%;
+        height: 300px;
+        border-bottom: 2px solid darkgreen;
+    }
+
+
+    .divFour{
+        width: 100%;
+        height: 200px;
+        padding-bottom: 40px;
+        border-bottom: 2px solid darkgreen;
+        margin-top: 30px;
+    }
+
+
+    .divFourTop{
+       
+        max-width: 100%;
+        height: 100px;
+        padding: 10px 20px 10px 20px;
+        font-size: 40px;
+        color: darkgreen;
+        font-weight: bolder;
+        line-height: 40px;
+    }
+
+
+    .divFourBottom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:calc(100% - 140px);
+        height: 100px;
+        line-height: 40px;
+        font-size: 40px;
+    }
+
+
+    a:link{
+        color:#25D366;
+    }
+    a:visited{
+        color:#25D366;
+
+    }
+    a:hover{
+        text-decoration: none;
+        color:#25D366;
+        cursor: pointer;
+    }
+   
+    
+    .divFive{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        margin-top: 50px;
+    }
+
+    
+    .divFiveLeft{
+        width: 60%;
+        height: 500px;
+    }
+
+
+    .divFiveRight{
+        width: 40%;
+        height: 500px;
+        font-size: 30px;
+        font-family: 'Times New Roman', Times, serif;
+      
+    }
+    .divFiveRightContent{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .divlast{
+        margin-top: 50px;
+        height:50px;
+        width: 100%;
+       
+        font-family: 'Times New Roman', Times, serif; 
+        background-color:rgb(200,200,200);   }
+</style>
+</head>
+
+<body>
+
+
+
+    <!-- ................header................................ -->
+    <div class="divfirst">
+        <img class="divfirstimg" src="agac.png" alt="">
+        <img class="sucuk1" src="sucukcuk.png" alt="sucuk">
+        <img class="sucuk2" src="sucukcuk.png" alt="sucuk">
+        <img class="sucuk3" src="sucukcuk.png" alt="sucuk">
+        <img class="sucuk4" src="sucukcuk.png" alt="sucuk">
+        <div class="divfirstText">
+         &nbsp;   afyon <br> sucukları
+        </div>
+    </div>
+
+      <!-- ................header................................ -->
+
+
+
+
+
+      <!-- .......................tanitim yazisi ............................-->
+
+
+    <div class="divSecond">
+        <div class="divSleft">
+            <span style="font-size: 50px;font-weight: bolder;padding-bottom: 10px;">
+                &nbsp; BİZ KİMİZ ? <br>
+            </span>
+            <br>
+            &nbsp; &nbsp; Kendi besi çiftliğimizde yetiştirdiğimiz hayvanlarımızdan elde ettiğimiz ürünler, fabrikadan halka komisyonsuz ulaştırmanın haklı gururunu yaşıyoruz! <br>
+
+            &nbsp; &nbsp;Baharatından içeriğine kadar, geleneksel meşhur Afyon sucuğu lezzetini yaşatıyor, üretimin her aşamasında uluslararası sertifikasyonlu hijyen ve gıda güvenliği prosedürlerini uyguluyoruz. <br>
+            &nbsp; &nbsp; Kendi besi çiftliğimizde yetiştirdiğimiz hayvanlarımızdan elde ettiğimiz ürünler, fabrikadan halka komisyonsuz ulaştırmanın haklı gururunu yaşıyoruz! <br>
+
+            &nbsp; &nbsp;Baharatından içeriğine kadar, geleneksel meşhur Afyon sucuğu lezzetini yaşatıyor, üretimin her aşamasında uluslararası sertifikasyonlu hijyen ve gıda güvenliği prosedürlerini uyguluyoruz. <br>
+            &nbsp; &nbsp; Kendi besi çiftliğimizde yetiştirdiğimiz hayvanlarımızdan elde ettiğimiz ürünler, fabrikadan halka komisyonsuz ulaştırmanın haklı gururunu yaşıyoruz! <br>
+
+            &nbsp; &nbsp;Baharatından içeriğine kadar, geleneksel meşhur Afyon sucuğu lezzetini yaşatıyor, üretimin her aşamasında uluslararası sertifikasyonlu hijyen ve gıda güvenliği prosedürlerini uyguluyoruz. <br>
+        </div>
+
+        <div class="divSright">
+            %100 DANA ETİ <br>
+            TAZE DOĞAL <br>
+            EL DEĞMEMİŞ<br>
+            GEZEN DANA <br>
+            GİZLİ TARİF
+        </div>
+
+    </div>
+
+      <!-- .......................tanitim yazisi ............................-->
+
+
+
+
+<!-- ................................
+sarkuteri foto............................... -->
+
+<div class="divThird">
+    <img style="object-fit:cover;height: 300px;width: 100%;" src="sarkuteri.jpg" alt="">
+</div>
+
+
+<!-- ................................
+sarkuteri foto............................... -->
+
+
+
+
+
+<!-- ....................online satış......... -->
+<div class="divFour">
+    <div class="divFourTop">
+        <div style="display:inline-block;width: 100%; display: flex;
+        justify-content: center;
+        align-items: center;"> 
+            AFYON SUCUKLARIMIZ ARTIK TÜM TÜRKİYEDE! 
+        </div>
+        <div  style="display:inline-block;width: 100%; display: flex;
+        justify-content: center;margin-top: 10px;
+        align-items: center;">
+            ONLİNE SİPARİŞ İÇİN &#128071;
+        </div>
+       
+  
+
+    </div>
+
+    <div class="divFourBottom">
+       
+       
+        <a target="_blank" href="https://www.n11.com/urun/afyon-yoresel-coglu-100-dana-eti-yoresel-afyonkarahisar-sucuk-4-kg-28735102?magaza=geldihemen"> 
+             <img style="height: 180px;width: auto;margin-right:70px;" src="N11.svg" alt="">
+        </a>
+
+
+        <a target="_blank" href="https://wa.me/+905511455661"> 
+            <i style="font-size: 80px;" class="fa-brands fa-whatsapp"></i>
+        </a>
+
+
+        <a target="_blank" href="https://www.trendyol.com/cavusoglu/hakiki-afyon-sucugu-100-dana-eti-5-kg-acisiz-p-327945688">
+            <img style="height: 180px;width: auto;margin-left: 70px;" src="Trendyol.com.svg" alt="">
+        </a>
+      
+       
+        
+    </div>
+</div>
+
+<!-- ....................online satış......... -->
+
+
+
+
+<!-- ..................adres................. -->
+<div style="display: flex;justify-content: center;align-items: center;font-size: 70px;font-weight: bold;margin-top: 40px;color:darkgreen;">
+    BİZE ULAŞIN!
+</div>
+<div class="divFive">
+    <div class="divFiveLeft">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.372990563788!2d28.896233750892357!3d40.22300837928696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca1184d25fd0d7%3A0xa498d7d1f8aedef0!2sTofa%C5%9F%20Fen%20Lisesi!5e0!3m2!1str!2str!4v1678914461476!5m2!1str!2str" width="80%" height="500"  style="border:0;margin-left: 10%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="divFiveRight">
+        <div class="divFiveRightContent">
+            <i class="fa-regular fa-location-dot"></i>
+             19 Mayıs, Dostluk Cd. 3 A D:B/C  16120  Nilüfer/Bursa
+        </div>
+
+        <div class="divFiveRightContent">
+            <i  class="fa-sharp fa-regular fa-envelopes-bulk"><i>
+            info@afyonsucuklari.com 
+        </div>
+        <div class="divFiveRightContent">
+            <i class="fa-regular fa-phone"></i>
+            <a href="tel:+90 850 897 45 78"></a>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- ..................adres................. -->
+
+<div class="divlast">
+    <span style=" display: flex;
+    justify-content: center;
+    align-items: center;"> © 2023 afyonsucukları.com  designed by smailyy</span>
+   
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

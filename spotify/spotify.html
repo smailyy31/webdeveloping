@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spofiy</title>
+    <link rel="stylesheet" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/regular.min.js" integrity="sha512-JLKhm0RfxW/ni7SF0nf1G/0SLYF/y//3fZ53VTgjUkEkAGo3QtZkuDoNFQIlnyekVctAiImaKTAW4yqSP7asGw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+    
+    @font-face{
+        font-family: arapcircularfont;
+        src:url(CircularSp-Arab-Book-7e814731b5ed2251c5661c7fa6dc2626.woff2);
+    }
+    body{
+        margin: 0;
+    }
+        .divFL{
+            display: flex;
+        }
+        .divSLleft{
+            height: calc(100% - 65px);
+            width: 240px;
+            background-color: black;
+            position: fixed;
+            left:0px;
+            flex-direction: column;
+            display:flex;
+            justify-content: space-between;
+            
+
+        }
+        .divSLright{
+            background-image: linear-gradient(rgb(31,31,31),rgb(0,0,0,));
+        }
+        .divSLbottom{
+            background-image: linear-gradient(to right,#ae2996,#509af3);
+            position: absolute;
+            width: 100%;
+            height: 65px;
+            bottom:0px;
+            border-top: 1px solid black;
+        }
+       
+        .divSLleftContent{
+            width: 100%;
+            height: 40px;
+            display: inline-block;
+            justify-content: center;
+            align-items: baseline;
+            padding-left: 10px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #B3B3B3;
+            cursor: pointer;
+        }
+        .spotifylogo{
+            background-image: url(spotifylogo.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height:80px
+        }
+        .divSLleftContent:clicked{
+            color:white;
+        }
+        .likedheart{
+            color: white;font-size: 12px;background-image: linear-gradient(to bottom right,blue,white);padding:5px;justify-content: center;text-align: center;border-radius: 10%;
+        }
+        #cookie{
+            font-size: 12px;
+        }
+        #cookie:hover{
+            text-decoration: underline;
+        }
+        .bozuk{
+            padding: 8px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-style: 1px solid white;
+            border-radius: 20px;
+            /* border:solid; */
+            width: fit-content;
+            height: fit-content;
+            margin-bottom: 200px;
+        }
+</style>
+
+        <div class="divFL">
+            <div class="divSLleft">
+                    <div style="color:antiquewhite">
+                        <div class="spotifylogo"> </div>
+                        <div style="color:white" class="divSLleftContent">
+                            <i style="color: white;font-size: 20px;" class="fa-solid fa-house"></i>&nbsp; Ana sayfa
+                        </div>
+
+                        <div class="divSLleftContent">
+                            <i  style="color: #B3B3B3;font-size: 20px;" class="fa-solid fa-magnifying-glass"></i>&nbsp; Ara
+                        </div>
+                        
+                        <div class="divSLleftContent">
+                            <img src="kitapligin.jpeg" alt="null" style="height: 20px;width: 20px;">&nbsp; Kitaplığın <br> <br><br>
+                        </div>
+
+                        <div class="divSLleftContent">
+                            <i  style="color:black;
+                            background-color: #B3B3B3;
+                            padding: 6px;
+                            padding-left: 8px;
+                            border-radius: 10%;
+                            font-size: 14px;" class="fa-solid fa-plus"></i>&nbsp; Çalma Listesi Oluştur
+                        </div>
+
+                        <div class="divSLleftContent"><svg  role="img" height="12" width="12" aria-hidden="true" viewBox="0 0 16 16" data-encore-id="icon" class="likedheart">
+                            <path style="filter: invert(100%)" d="M15.724 4.22A4.313 4.313 0 0 0 12.192.814a4.269 4.269 0 0 0-3.622 1.13.837.837 0 0 1-1.14 0 4.272 4.272 0 0 0-6.21 5.855l5.916 7.05a1.128 1.128 0 0 0 1.727 0l5.916-7.05a4.228 4.228 0 0 0 .945-3.577z"></path></svg>
+                            <!-- <i  style="color: white;
+                            font-size: 12px;
+                            background-image: linear-gradient(to bottom right,blue,white);
+                            padding:5px;
+                            justify-content: center;
+                            text-align: center;
+                            border-radius: 10%;" class="fa-solid fa-heart"></i> -->
+                            &nbsp; Beğenilen Şarkılar
+                        </div>    
+                    </div>
+
+                    
+                    <div  style="color:antiquewhite;">
+                        <div id="cookie" class="divSLleftContent ">
+                            Çerezler
+                        </div>
+
+                        <div class="divSLleftContent">
+                            <div class="bozuk">
+                                <i class="fa-solid  fa-globe" style="color:white;font-size: 16px;" ></i>Türkçe
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+
+
+
+            <div class="divSLright">
+
+            </div>
+
+
+
+
+
+
+            <div class="divSLbottom">
+           
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
